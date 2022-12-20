@@ -4,5 +4,10 @@
 {% bootstrap_css %}
 <title>Services</title>
 {% block content %}
-<div>Тута услуги</div>
-{% endblock %}z
+        {% for service in services %}
+            <div>
+                <p>Название: {{ service.name }}</p>
+            </div>
+        {% endfor %}
+
+{% endblock %}

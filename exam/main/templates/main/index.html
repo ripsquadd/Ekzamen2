@@ -5,15 +5,16 @@
     {% load static %}
     {% load bootstrap4 %}
     {% bootstrap_css %}
-    <title>Home</title>
+    <title>Exam</title>
 </head>
 <body>
-<nav class="navbar bg-light navbar-expand">
+<nav class="navbar bg-light navbar-expand border-bottom">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Главная</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Услуги</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">О нас</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'contacts' %}">Контакты</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'service_add' %}">Создать услугу</a></li>
     </ul>
 </nav>
 <main role="main" class="container mt-lg-5">
