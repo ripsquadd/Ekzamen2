@@ -1,5 +1,7 @@
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.views import LogoutView
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
@@ -41,7 +43,6 @@ def user_login(request):
         form = LoginForm()
     return render(request, 'login.html', {'form': form})
 
-
 @login_required
 def service_create(request):
     if request.method == 'POST':
@@ -59,3 +60,4 @@ def service_create(request):
 def service_render(request):
     services = Service.objects.all()
     return render(request, 'services.html', {'services': services})
+
