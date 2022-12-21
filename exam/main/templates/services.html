@@ -4,10 +4,12 @@
 {% bootstrap_css %}
 <title>Services</title>
 {% block content %}
-        {% for service in services %}
-            <div>
-                <p>Название: {{ service.name }}</p>
-            </div>
-        {% endfor %}
+{% for service in services %}
+<div class="table">
+    <p>Название: {{ service.name }}</p>
+    <p>Описание: {{ service.description }}</p>
+    <img class="w-25" src="{{ service.image.url }}" alt="Фото услуги">
+</div>
+{% endfor %}
 
 {% endblock %}

@@ -11,3 +11,8 @@ class ServiceAddForm(forms.ModelForm):
         model = Service
         fields = ('name', 'description', 'image')
         enctype = "multipart/form-data"
+
+
+class LoginForm(forms.Form):
+    username = forms.CharField(label='Логин')
+    password = forms.CharField(widget=forms.PasswordInput, label='Пароль')
